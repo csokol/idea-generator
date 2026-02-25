@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Runs - Research Results{% endblock %}
+{% block content %}
+<h1>Pipeline Runs</h1>
+{% if runs %}
+<figure>
+<table>
+    <thead>
+        <tr>
+            <th>Run ID</th>
+            <th>Goal</th>
+            <th>Domains</th>
+            <th>Docs</th>
+            <th>Date</th>
+            <th>Reports</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for r in runs %}
+        <tr>
+            <td><a href="/run/{{ r.run_id }}">{{ r.run_id[:12] }}</a></td>
+            <td>{{ r.goal[:80] }}{% if r.goal|length > 80 %}...{% endif %}</td>
+            <td class="domains">{{ r.domains | join(", ") }}</td>
+            <td>{{ r.corpus_count }}</td>
+            <td>{{ r.started_at[:19] | replace("T", " ") }}</td>
+            <td>
+                {% if r.has_report %}
+                    <span class="badge badge-yes">{{ r.report_count }}</span>
+                {% else %}
+                    <span class="badge badge-no">No</span>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</figure>
+{% else %}
+<p>No runs found. Run <code>uv run pipeline</code> to generate results.</p>
+{% endif %}
+{% endblock %}

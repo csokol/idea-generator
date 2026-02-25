@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Run {{ run.run_id[:12] }} - Research Results{% endblock %}
+{% block content %}
+<h1>Run {{ run.run_id }}</h1>
+
+<details>
+    <summary>Metadata ({{ run.corpus_count }} docs)</summary>
+    <div class="grid">
+        {% for key, value in run.params.items() %}
+        <div>
+            <strong>{{ key }}</strong><br>
+            {% if value is iterable and value is not string %}
+                {{ value | join(", ") }}
+            {% else %}
+                {{ value }}
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</details>
+
+{% if run.reports %}
+    {% if run.reports | length > 1 %}
+    <nav>
+        <strong>Reports:</strong>
+        {% for report in run.reports %}
+            <a href="#report-{{ report.label }}">{{ report.label }}</a>{% if not loop.last %} | {% endif %}
+        {% endfor %}
+    </nav>
+    {% endif %}
+
+    {% for report in run.reports %}
+    <article class="report-content" id="report-{{ report.label }}">
+        {% if run.reports | length > 1 %}
+        <h2>{{ report.label }} <small>({{ report.filename }})</small></h2>
+        {% endif %}
+        {{ report.html | safe }}
+    </article>
+    {% endfor %}
+
+<script>
+// Wrap each opportunity (h2) in a collapsible <details> element
+document.querySelectorAll('.report-content').forEach(article => {
+    const h2s = Array.from(article.querySelectorAll('h2'));
+    h2s.forEach(h2 => {
+        // Collect all siblings between this h2 and the next h2 (or end)
+        const siblings = [];
+        let el = h2.nextElementSibling;
+        while (el && el.tagName !== 'H2') {
+            siblings.push(el);
+            el = el.nextElementSibling;
+        }
+
+        const details = document.createElement('details');
+        const summary = document.createElement('summary');
+        summary.innerHTML = h2.innerHTML;
+        summary.style.fontSize = '1.25em';
+        summary.style.fontWeight = 'bold';
+        summary.style.cursor = 'pointer';
+
+        details.appendChild(summary);
+        siblings.forEach(s => details.appendChild(s));
+
+        h2.replaceWith(details);
+    });
+});
+</script>
+{% else %}
+<p>No report available for this run.</p>
+{% endif %}
+{% endblock %}

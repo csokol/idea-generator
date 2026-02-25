@@ -1,0 +1,227 @@
+10 Small SaaS Business Problems to Research
+=============================================
+
+1. Appointment no-show reduction for solo practitioners
+-------------------------------------------------------
+Find pain points and workarounds small clinics, therapists, and solo
+practitioners use to reduce appointment no-shows.
+
+uv run pipeline \
+  --goal "Find pain points and workarounds small clinics, therapists, and solo practitioners use to reduce appointment no-shows" \
+  --domains reddit.com practicalbusinessideas.com indiehackers.com therapyden.com physicianspractice.com \
+  --iterations 5 --fetch-pages -v
+
+
+2. Invoice chasing for freelancers and micro-agencies
+-----------------------------------------------------
+Discover how freelancers and small agencies handle late payments, invoice
+reminders, and cash flow gaps.
+
+uv run pipeline \
+  --goal "Discover how freelancers and small agencies handle late payments, invoice reminders, and cash flow gaps" \
+  --domains reddit.com indiehackers.com freelancersunion.org news.ycombinator.com xero.com \
+  --iterations 5 --fetch-pages -v
+
+
+3. Client onboarding for small B2B service firms
+-------------------------------------------------
+Find pain points in client onboarding workflows for consultancies,
+bookkeepers, and marketing agencies under 10 employees.
+
+uv run pipeline \
+  --goal "Find pain points in client onboarding workflows for consultancies, bookkeepers, and marketing agencies under 10 employees" \
+  --domains reddit.com indiehackers.com smallbiztrends.com processstreet.com copilot.com \
+  --iterations 5 --fetch-pages -v
+
+
+4. Review and reputation management for local businesses
+--------------------------------------------------------
+Identify how local businesses (restaurants, dentists, contractors) manage
+online reviews and respond to negative feedback.
+
+uv run pipeline \
+  --goal "Identify how local businesses like restaurants, dentists, and contractors manage online reviews and respond to negative feedback" \
+  --domains reddit.com localusearch.com brightlocal.com smallbiztrends.com yelp.com \
+  --iterations 5 --fetch-pages -v
+
+
+5. Employee shift scheduling for hourly-worker businesses
+---------------------------------------------------------
+Find frustrations and manual workarounds small retail, restaurant, and
+cleaning businesses use for employee shift scheduling.
+
+uv run pipeline \
+  --goal "Find frustrations and manual workarounds small retail, restaurant, and cleaning businesses use for employee shift scheduling" \
+  --domains reddit.com wheniwork.com smallbiztrends.com restaurantbusinessonline.com indiehackers.com \
+  --iterations 5 --fetch-pages -v
+
+
+6. Proposal and quote generation for trades and contractors
+-----------------------------------------------------------
+Discover how plumbers, electricians, landscapers, and small contractors
+create estimates, proposals, and close deals.
+
+uv run pipeline \
+  --goal "Discover how plumbers, electricians, landscapers, and small contractors create estimates, proposals, and close deals" \
+  --domains reddit.com contractortalk.com jlconline.com smallbiztrends.com indiehackers.com \
+  --iterations 5 --fetch-pages -v
+
+
+7. Tenant communication and maintenance requests for small landlords
+--------------------------------------------------------------------
+Find pain points small landlords and property managers with under 20
+units face managing tenant requests and communication.
+
+uv run pipeline \
+  --goal "Find pain points small landlords and property managers with under 20 units face managing tenant requests and communication" \
+  --domains reddit.com biggerpockets.com landlordology.com smallbiztrends.com indiehackers.com \
+  --iterations 5 --fetch-pages -v
+
+
+8. Social media content recycling for solopreneurs
+---------------------------------------------------
+Identify how solopreneurs and micro-businesses repurpose, schedule, and
+recycle social media content across platforms.
+
+uv run pipeline \
+  --goal "Identify how solopreneurs and micro-businesses repurpose, schedule, and recycle social media content across platforms" \
+  --domains reddit.com indiehackers.com buffer.com socialmediaexaminer.com smallbiztrends.com \
+  --iterations 5 --fetch-pages -v
+
+
+9. Inventory tracking for small e-commerce and Etsy sellers
+-----------------------------------------------------------
+Find frustrations handmade sellers and small e-commerce operators have
+with inventory tracking across multiple sales channels.
+
+uv run pipeline \
+  --goal "Find frustrations handmade sellers and small e-commerce operators have with inventory tracking across multiple sales channels" \
+  --domains reddit.com community.etsy.com ecommercefuel.com indiehackers.com smallbiztrends.com \
+  --iterations 5 --fetch-pages -v
+
+
+10. Student/client progress tracking for tutors and coaches
+-----------------------------------------------------------
+Discover how independent tutors, music teachers, and life coaches track
+client progress, notes, and session history.
+
+uv run pipeline \
+  --goal "Discover how independent tutors, music teachers, and life coaches track client progress, notes, and session history" \
+  --domains reddit.com indiehackers.com coachfoundation.com tutorful.com smallbiztrends.com \
+  --iterations 5 --fetch-pages -v
+
+
+================================================================================
+B2B / Marketplace Integration / AI-Enhanced Ideas
+================================================================================
+
+11. AI-Powered Review Response Manager for Shopify
+---------------------------------------------------
+Auto-generate contextual review responses for Shopify merchants using LLMs.
+
+uv run pipeline \
+  --goal "Pain points Shopify merchants have managing and responding to product reviews, and demand for AI-generated review responses" \
+  --domains community.shopify.com apps.shopify.com reddit.com indiehackers.com \
+  --iterations 5 --fetch-pages -v
+
+
+12. HubSpot <> Slack Deal Room Sync
+------------------------------------
+Automatically create and sync Slack channels with HubSpot deal stages.
+
+uv run pipeline \
+  --goal "Problems sales teams face keeping Slack channels in sync with HubSpot deals, missing context switching between tools, and demand for automated deal room creation" \
+  --domains community.hubspot.com reddit.com g2.com salesforce.stackexchange.com \
+  --iterations 5 --fetch-pages -v
+
+
+13. AI Meeting Notes → CRM Auto-Logger
+---------------------------------------
+Transcribe sales calls and auto-log notes, action items, and next steps into
+Salesforce or HubSpot.
+
+uv run pipeline \
+  --goal "Frustrations B2B sales reps have with manually logging meeting notes and action items into Salesforce or HubSpot, demand for automatic transcription-to-CRM tools" \
+  --domains community.hubspot.com trailblazercommunity.salesforce.com reddit.com g2.com producthunt.com \
+  --iterations 5 --fetch-pages -v
+
+
+14. Monday.com Automated Status Reports with LLM Summaries
+-----------------------------------------------------------
+AI-summarize Monday.com board activity into stakeholder-ready weekly reports.
+
+uv run pipeline \
+  --goal "Pain points project managers have generating weekly status reports from Monday.com boards, demand for AI-summarized project updates for stakeholders" \
+  --domains community.monday.com reddit.com indiehackers.com producthunt.com \
+  --iterations 5 --fetch-pages -v
+
+
+15. Shopify Inventory Forecasting for Small Brands
+---------------------------------------------------
+Affordable AI-driven demand prediction to prevent stockouts and overstock.
+
+uv run pipeline \
+  --goal "Problems small Shopify merchants have with inventory forecasting and stockouts, demand for affordable AI-driven demand prediction tools" \
+  --domains community.shopify.com apps.shopify.com reddit.com ecommercefuel.com \
+  --iterations 5 --fetch-pages -v
+
+
+16. AI-Powered Proposal Generator for Freelancers/Agencies (HubSpot/Salesforce)
+--------------------------------------------------------------------------------
+Auto-generate sales proposals from CRM deal context using LLMs.
+
+uv run pipeline \
+  --goal "Pain points agencies and freelancers have creating sales proposals from CRM data, demand for AI tools that auto-generate proposals from HubSpot or Salesforce deal context" \
+  --domains community.hubspot.com reddit.com indiehackers.com g2.com capterra.com \
+  --iterations 5 --fetch-pages -v
+
+
+17. Multi-Marketplace Listing Sync (Shopify + Etsy + Amazon)
+-------------------------------------------------------------
+Keep product listings, pricing, and inventory in sync across marketplaces.
+
+uv run pipeline \
+  --goal "Frustrations small e-commerce sellers have keeping product listings synchronized across Shopify Etsy and Amazon, pricing errors and inventory mismatches" \
+  --domains community.shopify.com community.etsy.com sellercentral.amazon.com reddit.com ecommercefuel.com \
+  --iterations 5 --fetch-pages -v
+
+
+18. AI Customer Churn Predictor for B2B SaaS (Stripe + CRM)
+------------------------------------------------------------
+Combine Stripe billing signals with CRM activity to flag at-risk accounts.
+
+uv run pipeline \
+  --goal "Problems small B2B SaaS companies have predicting customer churn, demand for tools combining Stripe billing data with CRM activity to flag at-risk accounts" \
+  --domains reddit.com indiehackers.com news.ycombinator.com baremetrics.com producthunt.com \
+  --iterations 5 --fetch-pages -v
+
+
+19. Salesforce Data Cleanup / Dedup Assistant with AI
+-----------------------------------------------------
+AI-assisted duplicate detection, merge suggestions, and data enrichment.
+
+uv run pipeline \
+  --goal "Pain points Salesforce admins have with duplicate records dirty data and manual data cleanup, demand for AI-assisted deduplication and enrichment tools" \
+  --domains trailblazercommunity.salesforce.com reddit.com g2.com appexchange.salesforce.com admin.salesforce.com \
+  --iterations 5 --fetch-pages -v
+
+
+20. AI Support Ticket Triage for Intercom/Zendesk → Monday.com
+---------------------------------------------------------------
+Auto-categorize and route support tickets, creating tasks in project management tools.
+
+uv run pipeline \
+  --goal "Frustrations support teams have routing and prioritizing tickets from Intercom or Zendesk, demand for AI triage that auto-categorizes and creates tasks in Monday.com or Jira" \
+  --domains community.monday.com community.intercom.com support.zendesk.com reddit.com producthunt.com \
+  --iterations 5 --fetch-pages -v
+
+
+--- Quick Ranking (Ideas 11-20) by Signal Strength ---
+
+| #  | Idea                        | Why promising                                    |
+|----|-----------------------------|--------------------------------------------------|
+| 13 | Meeting Notes → CRM        | Massive daily pain, clear willingness to pay     |
+| 19 | Salesforce Data Cleanup     | Huge existing market, AI angle is fresh          |
+| 17 | Multi-Marketplace Sync      | High volume of complaints in forums              |
+| 11 | AI Review Responses         | Shopify app store is monetizable, clear ROI      |
+| 15 | Inventory Forecasting       | Costly problem, incumbents are expensive         |

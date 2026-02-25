@@ -1,0 +1,5 @@
+.env
+__pycache__/
+*.pyc
+inventory-research.jsonl shopify-returns.jsonl
+data/
